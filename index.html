@@ -12,24 +12,43 @@
             align-items: center;
             justify-content: center;
             height: 100vh;
-            background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), 
-                        url('https://source.unsplash.com/random/1920x1080') no-repeat center center/cover;
+            background: linear-gradient(to bottom right, #e0f7fa, #80deea);
+            color: #333;
+        }
+
+        .container {
+            text-align: center;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            padding: 30px;
+            max-width: 400px;
         }
 
         h1 {
-            font-size: 3rem;
-            color: #333;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin: 10px 0;
         }
 
         @media (max-width: 600px) {
             h1 {
                 font-size: 2rem;
             }
+
+            p {
+                font-size: 1rem;
+            }
         }
     </style>
 </head>
 <body>
-    <h1>Portfólio</h1>
-</body>
-</html>
+    <div class="container">
+        <h1>Portfólio</h1>
+        <p>Filipe Hahn Magnus</p>
+        <p
