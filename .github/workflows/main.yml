@@ -3,7 +3,7 @@ name: Deploy to VM
 on:
   push:
     branches:
-      - main 
+      - main  # ou a branch que você preferir
 
 jobs:
   deploy:
@@ -13,12 +13,15 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
+      - name: List files
+        run: ls -la src  # Lista os arquivos para depuração
+
       - name: Copy files to VM
         uses: appleboy/scp-action@master
         with:
-          host: 64.181.180.214
-          username: ubuntu
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
-          port: 22
-          source: "src/*"  
-          target: "/var/www/html"
+          host: 64.181.180.214  # IP da sua VM
+          username: ubuntu       # Usuário SSH
+          key: ${{ secrets.SSH_PRIVATE_KEY }}  # Referência à chave privada
+          port: 22               # Porta SSH
+          source: "./src/*"     # Caminho atualizado
+          target: "/var/www/html"  # Destino na VM
