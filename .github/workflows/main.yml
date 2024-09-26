@@ -23,5 +23,5 @@ jobs:
           username: ubuntu       # Usuário SSH
           key: ${{ secrets.SSH_PRIVATE_KEY }}  # Referência à chave privada
           port: 22               # Porta SSH
-          source: "./src/*"     # Caminho atualizado
+          source: "./index.html"     # Caminho atualizado
           target: "/var/www/html"  # Destino na VM
